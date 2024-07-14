@@ -38,6 +38,7 @@
 
 /* navbar related styles */
 .navbar{
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -45,16 +46,19 @@
     font-weight: 700;
     font-size: 3rem;
 }
-.nav-items{
+.nav-item{
     list-style: none;
     margin-right: 30px;
 }
+.nav-links{
+    display: flex;
+}
 .nav-link{
     text-decoration: none;
-    
+    font-weight: 500;
 }
 .navbar, .banner{
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 /* banner related styles */
@@ -70,4 +74,9 @@
 }
 .banner-image{
     width: 100%;
+}
+@media screen and (max-width: 576px) {
+    .navbar,.nav-links{
+        flex-direction: column;
+    } 
 }
